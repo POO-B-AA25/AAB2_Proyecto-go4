@@ -1,5 +1,4 @@
 package Controller;
-
 import java.io.Serializable;
 
 public abstract class Pelicula implements Serializable {

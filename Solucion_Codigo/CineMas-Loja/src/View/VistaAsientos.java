@@ -22,3 +22,4 @@ public class VistaAsientos {
         System.out.println("\n----------------------------------");
     }
 }
+

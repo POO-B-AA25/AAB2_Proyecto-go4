@@ -102,7 +102,8 @@ public class FacturaDB {
     
     public ArrayList<String> consultarRegistroFacturas() {
         ArrayList<String> registro = new ArrayList<>();
-        String sql = "SELECT numero, cliente, total, pelicula AS item FROM FacturaPelicula UNION ALL SELECT numero, cliente, total, snack AS item FROM FacturaSnacks ORDER BY numero";
+        String sql = "SELECT numero, cliente, total, pelicula AS item FROM FacturaPelicula "
+                + "UNION ALL SELECT numero, cliente, total, snack AS item FROM FacturaSnacks ORDER BY numero";
         ConexionSQL conector = new ConexionSQL();
         try (Connection conn = conector.conectar(); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {

@@ -4,6 +4,7 @@ package View;
 import Controller.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class SistemaCine {
     private CineController controller;
     private Scanner scanner;
@@ -88,7 +89,7 @@ public class SistemaCine {
         int opcionFuncion = Integer.parseInt(scanner.nextLine()) - 1;
         Funcion funcion = controller.getFunciones().get(opcionFuncion);
 
-        System.out.print("¿Cuantos boletos desea comprar?: ");
+        System.out.print("Cuantos boletos desea comprar?: ");
         int cantidadBoletos = Integer.parseInt(scanner.nextLine());
         
         ArrayList<Asiento> asientosSeleccionados = new ArrayList<>();
@@ -127,7 +128,7 @@ public class SistemaCine {
         String opcionSnack;
         
         do {
-            System.out.print("Seleccione un snack por número (o escriba 'fin' para terminar): ");
+            System.out.print("Seleccione un snack por numero (o escriba 'fin' para terminar): ");
             opcionSnack = scanner.nextLine();
             if (!opcionSnack.equalsIgnoreCase("fin")) {
                 try {
